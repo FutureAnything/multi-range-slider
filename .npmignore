@@ -1,0 +1,12 @@
+!dist/multirangeslider.min.js
+dist/files
+dist/index.html
+
+test/
+dev/*
+!dev/multirangeslider.less
+
+dev.md
+.travis.yml
+.idea
+gulpfile.js

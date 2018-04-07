@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "multi-range-slider@git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+        "scope": null,
+        "escapedName": "multi-range-slider",
+        "name": "multi-range-slider",
+        "rawSpec": "git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+        "spec": "http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+        "type": "git"
+      },
+      "/apps/fa-webapp"
+    ]
+  ],
+  "_from": "git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+  "_id": "multi-range-slider@0.5.2",
+  "_inCache": true,
+  "_location": "/multi-range-slider",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "multi-range-slider@git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+    "scope": null,
+    "escapedName": "multi-range-slider",
+    "name": "multi-range-slider",
+    "rawSpec": "git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+    "spec": "http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+    "type": "git"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider#9467e49ec51e21f34a6726c5eaf1400619d4277f",
+  "_shasum": "ed75aafb0b6ed71f709b8a7e7f7f229a1ed8dca5",
+  "_shrinkwrap": null,
+  "_spec": "multi-range-slider@git+http://gitlab.digital8.com.au/michaelrhodes/multi-range-slider",
+  "_where": "/apps/fa-webapp",
+  "author": {
+    "name": "Pavel Tyavin",
+    "email": "pavel@tyavin.name"
+  },
+  "bugs": {
+    "url": "https://github.com/paveltyavin/multirangeslider/issues"
+  },
+  "dependencies": {
+    "mittens": "^1.0.8",
+    "xtend": "^4.0.1"
+  },
+  "description": "[![Build Status](https://travis-ci.org/paveltyavin/multirangeslider.svg?branch=master)] (https://travis-ci.org/paveltyavin/multirangeslider)",
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "browserify": "9.0.8",
+    "bundle-collapser": "^1.2.1",
+    "node-qunit-phantomjs": "1.3.1",
+    "qunitjs": "1.22.0",
+    "simulant": "0.2.0",
+    "uglifyjs": "^2.4.11"
+  },
+  "gitHead": "9467e49ec51e21f34a6726c5eaf1400619d4277f",
+  "homepage": "https://github.com/paveltyavin/multirangeslider",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "multi-range-slider",
+  "optionalDependencies": {},
+  "readme": "# multirangeslider\n\n[![Build Status](https://travis-ci.org/paveltyavin/multirangeslider.svg?branch=master)]\n(https://travis-ci.org/paveltyavin/multirangeslider)\n\nSlider for multiple ranges.\n\n![slider](slider.gif \"slider\")\n \nThe idea comes from [Elessar](https://github.com/quarterto/Elessar)\n project. Thank you, [Matt](https://github.com/quarterto/)!\n \nMain documentation is [here](http://paveltyavin.github.io/multirangeslider/).\n\n## Install && Usage\n\n    npm install multirangeslider\n    \n\nmultirangeslider exports as a CommonJS (Node) module, an AMD module, or a browser global:\n```javascript\nvar multirangeslider = require('multirangeslider');\n```\n```javascript\nrequire(['multirangeslider'], function(multirangeslider) { ... });\n```\n```html\n<script src=\"path/to/multirangeslider.js\"></script>\n```\n\nCreate an instance with `var slider = new multirangeslider` then add `slider.el` to the DOM somewhere.\n\n```javascript\nvar slider = new multirangeslider;\nvar yourElement = document.getElementById('your-element');\nyourElement.appendChild(slider.el);\n```\n\n## Documentation\n\nSee this [page](http://paveltyavin.github.io/multirangeslider/).\n\n## Licence\n[MIT](licence.md)",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paveltyavin/multirangeslider.git"
+  },
+  "scripts": {
+    "build": "browserify -p bundle-collapser/plugin -s MultiRangeSlider index.js | uglifyjs -cm 2>/dev/null 1> dist/multirangeslider.js",
+    "test": "node-qunit-phantomjs test/index.html --verbose"
+  },
+  "version": "0.5.2"
+}

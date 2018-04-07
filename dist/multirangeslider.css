@@ -1,0 +1,88 @@
+.mrs-slider {
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mrs-bar {
+  height: 50px;
+  width: 100%;
+  display: block;
+  background: #cfedfb;
+  position: relative;
+  border: 0 !important;
+  box-sizing: border-box;
+}
+.mrs-bar .mrs-label {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+  display: inline;
+  color: #ffffff;
+}
+.mrs-bar .mrs-ghost,
+.mrs-bar .mrs-range {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.mrs-bar .mrs-ghost {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.mrs-bar .mrs-range {
+  background: #5ac2f0;
+  cursor: move;
+  -webkit-user-drag: none;
+}
+.mrs-bar .mrs-range.mrs-pressed {
+  background: #43baee;
+}
+.mrs-bar .mrs-range .mrs-left-handler,
+.mrs-bar .mrs-range .mrs-right-handler {
+  position: absolute;
+  width: 8px;
+  background: #1eacea;
+  height: 100%;
+  cursor: ew-resize;
+  -webkit-user-drag: none;
+}
+.mrs-bar .mrs-range .mrs-left-handler {
+  left: 0;
+}
+.mrs-bar .mrs-range .mrs-right-handler {
+  right: 0;
+}
+.mrs-bar .mrs-range.mrs-zero-width.mrs-pressed-right .mrs-right-handler {
+  right: -8px;
+}
+.mrs-bar .mrs-range.mrs-zero-width.mrs-pressed-left .mrs-left-handler {
+  left: -8px;
+}
+.mrs-bar .mrs-range.mrs-zero-width .mrs-remove-popup {
+  left: -12px;
+}
+.mrs-bar .mrs-range .mrs-remove-popup {
+  transition: 0.5s;
+  position: absolute;
+  top: -30px;
+  text-align: center;
+  width: 100%;
+}
+.mrs-bar .mrs-range .mrs-remove-popup .mrs-remove-label {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  color: #ffffff;
+  opacity: 0.5;
+  display: inline-block;
+}
+.mrs-bar.mrs-allowChangeFalse .mrs-left-handler,
+.mrs-bar.mrs-allowChangeFalse .mrs-right-handler,
+.mrs-bar.mrs-allowChangeFalse .mrs-range {
+  cursor: default;
+}
